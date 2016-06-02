@@ -2,3 +2,10 @@
 
 @import "components/card";
 @import "components/grid";
+@import "components/nav";
+@import "components/side-menu";
+
+#main {
+    position: relative;
+    @include transition(left 0.5s ease, top 1s ease, bottom 10s);
+}
