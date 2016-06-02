@@ -1,0 +1,4 @@
+.card {
+  background: blue; }
+  .card .card-image {
+    height: 10px; }
