@@ -5,11 +5,15 @@
 
 .card {
     &:hover {
-        border: 1px solid black;
+        .card-image {
+            width: 105%;
+            @include transition(width .1s ease-in);
+        }
     }
     
     .card-image {
         width: 100%;
+        @include transition(width .1s ease-out);
         align-content: center;
     }
     .card-title {

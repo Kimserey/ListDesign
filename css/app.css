@@ -1,0 +1,24 @@
+.content-text-center, .card .card-title, .card .card-price {
+  width: 100%;
+  text-align: center; }
+
+.card:hover .card-image {
+  width: 105%;
+  -webkit-transition: width 0.1s ease-in;
+  -moz-transition: width 0.1s ease-in;
+  -ms-transition: width 0.1s ease-in;
+  -o-transition: width 0.1s ease-in;
+  transition: width 0.1s ease-in; }
+
+.card .card-image {
+  width: 100%;
+  -webkit-transition: width 0.1s ease-out;
+  -moz-transition: width 0.1s ease-out;
+  -ms-transition: width 0.1s ease-out;
+  -o-transition: width 0.1s ease-out;
+  transition: width 0.1s ease-out;
+  align-content: center; }
+
+.grid-row .grid-column {
+  display: inline-block;
+  width: 30%; }
