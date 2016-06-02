@@ -1,0 +1,21 @@
+.content-text-center {
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    &:hover {
+        border: 1px solid black;
+    }
+    
+    .card-image {
+        width: 100%;
+        align-content: center;
+    }
+    .card-title {
+        @extend .content-text-center
+    }
+    .card-price {
+        @extend .content-text-center
+    }
+}
