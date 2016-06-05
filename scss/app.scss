@@ -7,6 +7,7 @@
 @import "mixins/transition";
 @import "mixins/box-shadow";
 
+@import "components/mask";
 @import "components/card";
 @import "components/grid";
 @import "components/nav";
@@ -19,6 +20,11 @@ body {
     padding: 0;
     margin: 0;
     margin-top: 6em;
+    
+    &.disable-scroll {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
 }
 
 #main {
