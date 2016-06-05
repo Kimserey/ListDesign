@@ -33,9 +33,6 @@ nav ul {
     .side-menu a:hover {
       background: blue; }
 
-.cell-padding, .table-card table thead th, .table-card table tbody td {
-  padding: 0.7em 1em; }
-
 .table-card {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -43,23 +40,44 @@ nav ul {
   background-color: white;
   margin: 0 auto; }
   .table-card .table-title {
-    color: #808080;
-    padding: 1em 1em;
-    font-size: large; }
+    padding: 1em 0.6em;
+    font-size: x-large; }
   .table-card table {
     width: 100%;
     border-collapse: collapse; }
     .table-card table thead th {
+      padding: 0.7em 1em;
       color: #808080;
-      border-bottom: 1px solid #808080; }
+      border-bottom: 1px solid #808080;
+      text-align: left; }
+      .table-card table thead th.right {
+        text-align: right; }
     .table-card table tbody tr {
-      text-align: center;
+      text-align: left;
       border-top: 1px solid #C8C9CA;
       border-bottom: 1px solid #C8C9CA; }
-    .table-card table tbody td.money {
-      text-align: right; }
-    .table-card table tbody td.money:after {
-      content: "GBP"; }
+      .table-card table tbody tr:hover {
+        cursor: pointer;
+        background-color: #F7F7F7; }
+    .table-card table tbody td {
+      padding: 0.7em 1em; }
+      .table-card table tbody td.money {
+        text-align: right; }
+      .table-card table tbody td.money:after {
+        content: " GBP"; }
+    .table-card table tfoot .pagination {
+      float: right;
+      font-size: x-large;
+      padding: 0.2em; }
+      .table-card table tfoot .pagination .pagination-button, .table-card table tfoot .pagination .pagination-previous, .table-card table tfoot .pagination .pagination-next {
+        display: inline-block;
+        cursor: pointer; }
+        .table-card table tfoot .pagination .pagination-button:hover, .table-card table tfoot .pagination .pagination-previous:hover, .table-card table tfoot .pagination .pagination-next:hover {
+          text-decoration: underline; }
+      .table-card table tfoot .pagination .pagination-previous:after {
+        content: "<"; }
+      .table-card table tfoot .pagination .pagination-next:after {
+        content: ">"; }
 
 html {
   font-family: 'Roboto', sans-serif;
