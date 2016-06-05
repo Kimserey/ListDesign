@@ -4,29 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Expenses</title>
         <link rel="stylesheet" href="css/app.css">
-        
-        <script>
-            function toggleMenu() {
-                var mask = document.getElementById('mask');
-                var body = document.body;
-                
-                var showMask = function () {
-                    mask.classList.add('visible');
-                    body.classList.add("disable-scroll");
-                }
-                
-                var hideMask = function () {
-                    mask.classList.remove('visible');
-                    body.classList.remove('disable-scroll');
-                }
-                
-                if(mask.classList.contains('visible')) {
-                    hideMask();
-                } else {
-                    showMask();
-                }
-            }
-        </script>
+        <script src="js/nav.js"></script>
     </head>
     <body>
         <header>
@@ -36,12 +14,27 @@
             <button class="nav-menu" onclick="toggleMenu()">
                 <i class="fa fa-bars"></i>
             </button>
-            <dt>
-                Expenses
-                <dd>
-                    <a> Sorted per month </a>
-                </dd>
-            </dt>
+            
+            <div id="side-menu">
+                <div class="brand">
+                    Data expenses
+                </div>
+                <dl>
+                    <dt>
+                        Expenses
+                    </dt>
+                    <dd>
+                        <a> Sorted per month </a>
+                        <a> Top contributors </a>
+                    </dd>
+                    <dt>
+                        Shops
+                    </dt>
+                    <dd>
+                        <a> All shops</a>
+                    </dd>
+                </dl>
+            </div>
         </nav>
         
         <div class="table-card">
@@ -254,6 +247,6 @@
             </table>
         </div>
         
-        <div id="mask" class="mask" onclick="toggleMenu()"></div>
+        <div id="mask" onclick="toggleMenu()"></div>
     </body>
 </html>

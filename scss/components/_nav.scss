@@ -27,4 +27,42 @@ nav {
         left: 1em;
         font-size: large;
     }
+    
+    #side-menu {
+        $width: 15em;
+        
+        position: fixed;
+        top: 0;
+        left: - $width;
+        width: $width;
+        background: $white;
+        overflow-y: scroll;
+        height: 100%;
+        z-index: 5;
+        
+        @include transition(0.5s);
+        
+        &.show {
+            left: 0;   
+        }
+        
+        .brand {
+            padding: 0.8em 0.6em;
+            font-size: x-large;
+            border-bottom: 1px solid grey;
+        }
+        
+        dl {        
+            dt {
+                padding: 1em;
+            }
+            
+            dd {
+                a {
+                    display: block;
+                    padding: 0.5em;
+                }
+            }
+        }
+    }
 }
