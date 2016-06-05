@@ -37,16 +37,16 @@ nav ul {
   padding: 0.7em 1em;
   width: 10em; }
 
-table thead th {
-  background-color: dodgerblue;
-  color: white; }
-
-table tbody td {
-  border-bottom: 1px solid grey;
-  border-left: 1px solid grey; }
-
-table tbody td:last-child {
-  border-right: 1px solid grey; }
+table {
+  border-collapse: collapse; }
+  table thead th {
+    background-color: dodgerblue;
+    color: white; }
+  table tbody td {
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey; }
+  table tbody td:last-child {
+    border-right: 1px solid grey; }
 
 html {
   font-family: 'Roboto', sans-serif; }
