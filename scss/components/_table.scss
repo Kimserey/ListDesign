@@ -1,28 +1,49 @@
-.th-padding {
+.cell-padding {
     padding: 0.7em 1em;
-    width: 10em;
 }
 
-table {
-    border-collapse: collapse;
-     
-    thead {
-        th {
-            @extend .th-padding;
-            background-color: dodgerblue;
-            color: white;
-        }
+.table-card {
+    @include box-shadow(0 1px 2px rgba(0,0,0,.1));
+    background-color: white;
+    margin: 0 auto;
+        
+    .table-title {
+        color: #808080;
+        padding: 1em 1em;
+        font-size: large;
     }
-    
-    tbody {
-        td {
-            @extend .th-padding;
-            border-bottom: 1px solid grey;
-            border-left: 1px solid grey;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        
+        thead {
+            th {
+                @extend .cell-padding;
+                color: #808080;
+                border-bottom: 1px solid #808080;
+            }
         }
         
-        td:last-child {
-            border-right: 1px solid grey;
+        tbody {
+            tr {
+                text-align: center;
+                border-top: 1px solid #C8C9CA;
+                border-bottom: 1px solid #C8C9CA;
+            }
+
+            td {
+                @extend .cell-padding;
+                
+                &.money {
+                    text-align: right;
+                    
+                }
+                
+                &.money:after {
+                    content: "GBP"
+                }
+            }
         }
-    }
+    }   
 }
