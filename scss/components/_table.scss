@@ -1,0 +1,28 @@
+.th-padding {
+    padding: 0.7em 1em;
+    width: 10em;
+}
+
+table {
+    border-collapse: collapse;
+    
+    thead {
+        th {
+            @extend .th-padding;
+            background-color: dodgerblue;
+            color: white;
+        }
+    }
+    
+    tbody {
+        td {
+            @extend .th-padding;
+            border-bottom: 1px solid grey;
+            border-left: 1px solid grey;
+        }
+        
+        td:last-child {
+            border-right: 1px solid grey;
+        }
+    }
+}
