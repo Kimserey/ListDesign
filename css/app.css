@@ -68,12 +68,17 @@ nav ul {
     .table-card table tfoot .pagination {
       float: right;
       font-size: x-large;
-      padding: 0.2em; }
+      padding: 0.2em 1em; }
       .table-card table tfoot .pagination .pagination-button, .table-card table tfoot .pagination .pagination-previous, .table-card table tfoot .pagination .pagination-next {
         display: inline-block;
         cursor: pointer; }
         .table-card table tfoot .pagination .pagination-button:hover, .table-card table tfoot .pagination .pagination-previous:hover, .table-card table tfoot .pagination .pagination-next:hover {
           text-decoration: underline; }
+        .table-card table tfoot .pagination .pagination-button.disabled, .table-card table tfoot .pagination .disabled.pagination-previous, .table-card table tfoot .pagination .disabled.pagination-next {
+          color: #C7C7C7;
+          cursor: no-drop; }
+          .table-card table tfoot .pagination .pagination-button.disabled:hover, .table-card table tfoot .pagination .disabled.pagination-previous:hover, .table-card table tfoot .pagination .disabled.pagination-next:hover {
+            text-decoration: none; }
       .table-card table tfoot .pagination .pagination-previous:after {
         content: "<"; }
       .table-card table tfoot .pagination .pagination-next:after {

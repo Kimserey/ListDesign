@@ -57,14 +57,23 @@ $cell-padding: 0.7em 1em;
             .pagination {
                 float: right;
                 font-size: x-large;
-                padding: 0.2em;
+                padding: 0.2em 1em;
                 
                 .pagination-button {
                     display: inline-block;
-                    cursor:pointer;
+                    cursor: pointer;
 
                     &:hover {
                         text-decoration: underline;
+                    }
+                    
+                    &.disabled {
+                        color: #C7C7C7;
+                        cursor: no-drop;
+                        
+                        &:hover {
+                            text-decoration: none;
+                        }
                     }
                 }
                                 
