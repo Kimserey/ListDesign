@@ -5,17 +5,16 @@
 
 @import "components/card";
 @import "components/grid";
-@import "components/nav";
+@import "components/header";
 @import "components/side-menu";
 @import "components/table";
 
-html {
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #F7F7F7;
-}
-
-body {
-    padding: 2em;
+    padding: 0;
+    margin: 0;
+    margin-top: 6em;
 }
 
 #main {

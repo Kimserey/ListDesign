@@ -3,7 +3,12 @@ $cell-padding: 0.7em 1em;
 .table-card {
     @include box-shadow(0 1px 2px rgba(0,0,0,.1));
     background-color: $white;
-    margin: 0 auto;
+    margin: 2em;
+    @include transition(0.5s);
+    
+    &:hover {
+        @include box-shadow(2px 2px 4px rgba(0,0,0,.4));
+    }
         
     .table-title {
         padding: 1em 0.6em;
