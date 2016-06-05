@@ -16,6 +16,10 @@
   display: inline-block;
   width: 30%; }
 
+header {
+  background-color: white;
+  border-bottom: 1px solid #808080; }
+
 nav ul {
   list-style-type: none; }
 
@@ -75,7 +79,7 @@ nav ul {
         .table-card table tfoot .pagination .pagination-button:hover, .table-card table tfoot .pagination .pagination-previous:hover, .table-card table tfoot .pagination .pagination-next:hover {
           text-decoration: underline; }
         .table-card table tfoot .pagination .pagination-button.disabled, .table-card table tfoot .pagination .disabled.pagination-previous, .table-card table tfoot .pagination .disabled.pagination-next {
-          color: #C7C7C7;
+          color: #F7F7F7;
           cursor: no-drop; }
           .table-card table tfoot .pagination .pagination-button.disabled:hover, .table-card table tfoot .pagination .disabled.pagination-previous:hover, .table-card table tfoot .pagination .disabled.pagination-next:hover {
             text-decoration: none; }

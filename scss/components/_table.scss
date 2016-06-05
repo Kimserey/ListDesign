@@ -2,7 +2,7 @@ $cell-padding: 0.7em 1em;
 
 .table-card {
     @include box-shadow(0 1px 2px rgba(0,0,0,.1));
-    background-color: white;
+    background-color: $white;
     margin: 0 auto;
         
     .table-title {
@@ -17,8 +17,8 @@ $cell-padding: 0.7em 1em;
         thead {
             th {
                 padding: $cell-padding;
-                color: #808080;
-                border-bottom: 1px solid #808080;
+                color: $grey;
+                border-bottom: 1px solid $grey;
                 text-align: left;
                 
                 &.right {
@@ -30,12 +30,12 @@ $cell-padding: 0.7em 1em;
         tbody {
             tr {
                 text-align: left;
-                border-top: 1px solid #C8C9CA;
-                border-bottom: 1px solid #C8C9CA;
+                border-top: 1px solid $grey-light;
+                border-bottom: 1px solid $grey-light;
                 
                 &:hover {
                     cursor: pointer;
-                    background-color: #F7F7F7;
+                    background-color: $grey-very-light;
                 }
             }
 
@@ -68,7 +68,7 @@ $cell-padding: 0.7em 1em;
                     }
                     
                     &.disabled {
-                        color: #C7C7C7;
+                        color: $grey-very-light;
                         cursor: no-drop;
                         
                         &:hover {
