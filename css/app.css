@@ -2245,14 +2245,48 @@ nav dt {
   nav dt dd {
     font-weight: 300; }
 
-nav .nav-menu {
+nav .nav-button, nav .nav-menu, nav .nav-menu-right button {
   border: none;
   background-color: white;
   cursor: pointer;
   position: fixed;
   top: 1em;
-  left: 1em;
   font-size: large; }
+
+nav .nav-menu {
+  left: 1em; }
+
+nav .nav-menu-right button {
+  right: 1em; }
+
+nav .nav-menu-right .filter {
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+  position: fixed;
+  padding: 1em;
+  top: 2em;
+  right: 0;
+  background: white;
+  visibility: hidden;
+  opacity: 0; }
+  nav .nav-menu-right .filter.show {
+    visibility: visible;
+    opacity: 1;
+    top: 3em;
+    right: 1em; }
+  nav .nav-menu-right .filter ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    nav .nav-menu-right .filter ul li {
+      padding: 0.5em;
+      cursor: pointer; }
 
 nav #side-menu {
   position: fixed;
@@ -2273,12 +2307,16 @@ nav #side-menu {
   nav #side-menu .brand {
     padding: 0.8em 0.6em;
     font-size: x-large;
-    border-bottom: 1px solid grey; }
+    border-bottom: 1px solid #808080; }
   nav #side-menu dl dt {
     padding: 1em; }
   nav #side-menu dl dd a {
     display: block;
-    padding: 0.5em; }
+    padding: 0.5em;
+    text-decoration: none;
+    color: black; }
+    nav #side-menu dl dd a:hover {
+      color: #808080; }
 
 .table-card {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);

@@ -18,14 +18,55 @@ nav {
         }
     }
     
-    .nav-menu {
+    .nav-button {
         border: none;
         background-color: $white;
         cursor: pointer;
         position: fixed;
         top: 1em;
-        left: 1em;
         font-size: large;
+    }
+    .nav-menu {
+        @extend .nav-button;
+        left: 1em;
+    }
+    
+    .nav-menu-right{
+        button {
+            @extend .nav-button;
+            right: 1em;
+        }
+        
+        .filter {
+            @include transition(0.1s);
+            @include box-shadow(1px 1px 2px rgba(0,0,0,.45));
+            
+            position: fixed;
+            padding:1em;
+            top: 2em;
+            right: 0;
+            background: white;
+            visibility: hidden;
+            opacity: 0;
+            
+            &.show {
+                visibility: visible;
+                opacity: 1;
+                top: 3em;
+                right: 1em;
+            }
+            
+            ul {    
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+                li {
+                    padding: 0.5em;
+                    cursor: pointer;
+                }
+            }
+        }
     }
     
     #side-menu {
@@ -49,7 +90,7 @@ nav {
         .brand {
             padding: 0.8em 0.6em;
             font-size: x-large;
-            border-bottom: 1px solid grey;
+            border-bottom: 1px solid $grey;
         }
         
         dl {        
@@ -61,6 +102,12 @@ nav {
                 a {
                     display: block;
                     padding: 0.5em;
+                    text-decoration: none;
+                    color: black;
+                    
+                    &:hover {
+                        color: $grey;
+                    }
                 }
             }
         }

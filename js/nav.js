@@ -2,7 +2,25 @@
  * Toggle side menu
  * Requires: mask - side menu
  * ======================================================================= */
- 
+
+function toggleFilter() {
+    var filter = document.getElementById('filter');
+    
+    var show = function () {
+        filter.classList.add('show');
+    }
+    
+    var hide = function () {
+        filter.classList.remove('show');
+    }
+    
+    if(filter.classList.contains('show')) {
+        hide();
+    } else {
+        show();
+    }
+}
+
 function toggleMenu() {
     var mask = document.getElementById('mask');
     var menu = document.getElementById('side-menu');
