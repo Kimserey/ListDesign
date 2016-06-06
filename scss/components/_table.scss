@@ -46,13 +46,24 @@ $cell-padding: 0.7em 1em;
 
             td {
                 padding: $cell-padding;
-                
+                                
                 &.money {
                     text-align: right;
                 }
                 
                 &.money:after {
                     content: " GBP";
+                }
+                
+                &[colspan] {
+                    padding: 0;
+                    
+                    table {
+                        position: relative;
+                        top:-0.5em;
+                        background-color: white;
+                        @include box-shadow(2px 2px 4px rgba(0,0,0,.4));
+                    }   
                 }
             }
         }

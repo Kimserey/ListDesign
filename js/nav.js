@@ -1,8 +1,3 @@
-/* =======================================================================
- * Toggle side menu
- * Requires: mask - side menu
- * ======================================================================= */
-
 function toggleFilter() {
     var filter = document.getElementById('filter');
     
