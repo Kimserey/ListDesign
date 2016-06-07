@@ -1,134 +1,145 @@
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Expenses</title>
-        <link rel="stylesheet" href="css/app.css">
-        <script src="js/app.js"></script>
-    </head>
-    <body>
-        <header>
-            Expenses - Sorted per month
-        </header>
 
-        <nav>
-            <button class="nav-menu" onclick="toggleMenu()">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <header>
+        Expenses - Sorted per month
+    </header>
+
+    <nav>
+        <button class="nav-menu" onclick="toggleMenu()">
                 <i class="fa fa-bars"></i>
             </button>
-            
-            <div class="nav-menu-right">
-                <button onclick="toggleFilter()">
+
+        <div class="nav-menu-right">
+            <button onclick="toggleFilter()">
                     <i class="fa fa-filter" aria-hidden="true"></i>
                 </button>
-                <div id="filter" class="filter">
-                    <ul>
-                        <li><label><input type="checkbox">&nbsp;Restaurant</label><br></li>
-                        <li><label><input type="checkbox">&nbsp;Supermarket</label><br></li>
-                        <li><label><input type="checkbox">&nbsp;Other</label><br></li>
-                    </ul>
-                </div>
+            <div id="filter" class="filter">
+                <ul>
+                    <li><label><input type="checkbox">&nbsp;Restaurant</label><br></li>
+                    <li><label><input type="checkbox">&nbsp;Supermarket</label><br></li>
+                    <li><label><input type="checkbox">&nbsp;Other</label><br></li>
+                </ul>
             </div>
-    
-            <div id="side-menu">
-                <div class="brand">
-                    Data expenses
-                </div>
+        </div>
+
+        <div id="side-menu">
+            <div class="brand">
+                Data expenses
+            </div>
+            <dl>
+                <dt>
+                    Expenses
+                </dt>
+                <dd>
+                    <a href="#"> Per month </a>
+                    <a href="#"> Per category </a>
+                </dd>
+                <dt>
+                    Shops
+                </dt>
+                <dd>
+                    <a> All shops</a>
+                </dd>
+            </dl>
+        </div>
+    </nav>
+
+    <div class="card">
+        <div class="card-title">April 2016</div>
+        <div class="card-content">
+            <div class="card-list-item" data-target="lens-1" onclick="toggleCardLens(this)">
                 <dl>
                     <dt>
-                        Expenses
+                        Supermarket
                     </dt>
                     <dd>
-                        <a href="#"> Per month </a>
-                        <a href="#"> Per category </a>
-                    </dd>
-                    <dt>
-                        Shops
-                    </dt>
-                    <dd>
-                        <a> All shops</a>
+                        <div class="amount">10.00</div>
                     </dd>
                 </dl>
-            </div>
-        </nav>
-
-        <div class="card">
-            <div class="card-title">April 2016</div>
-            <div class="card-content">
-                <div class="card-list-item" data-target="lens-1" onclick="toggleCardLens(this)">
-                    <div class="card-list-item-title">Supermarket</div>
-                    <div class="card-list-item-content">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <!--<div id="lens-1" class="card-list-item-content-lens">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Label</th>
-                                    <th class="right">Amount</th>
-                                    <th>Category</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>4/28/2016</td>
-                                    <td>WAITROSE</td>
-                                    <td class="money">-17.9</td>
-                                    <td>Supermarket</td>
-                                </tr><tr>
-                                    <td>4/28/2016</td>
-                                    <td>M&amp;S</td>
-                                    <td class="money">-20.61</td>
-                                    <td>Supermarket</td>
-                                </tr><tr>
-                                    <td>4/27/2016</td>
-                                    <td>CASH WITHDRAW</td>
-                                    <td class="money">-100</td>
-                                    <td>Cash</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>-->
+                <div id="lens-1" class="card-list-item-content-lens">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Label</th>
+                                <th class="right">Amount</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>4/28/2016</td>
+                                <td>WAITROSE</td>
+                                <td class="money">-17.9</td>
+                                <td>Supermarket</td>
+                            </tr>
+                            <tr>
+                                <td>4/28/2016</td>
+                                <td>M&amp;S</td>
+                                <td class="money">-20.61</td>
+                                <td>Supermarket</td>
+                            </tr>
+                            <tr>
+                                <td>4/27/2016</td>
+                                <td>CASH WITHDRAW</td>
+                                <td class="money">-100</td>
+                                <td>Cash</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <div class="card-list-item" data-target="lens-2" onclick="toggleCardLens(this)">
-                    <div class="card-list-item-title">Supermarket</div>
-                    <div class="card-list-item-content">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div id="lens-2" class="card-list-item-content-lens">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Label</th>
-                                    <th class="right">Amount</th>
-                                    <th>Category</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>4/28/2016</td>
-                                    <td>WAITROSE</td>
-                                    <td class="money">-17.9</td>
-                                    <td>Supermarket</td>
-                                </tr><tr>
-                                    <td>4/28/2016</td>
-                                    <td>M&amp;S</td>
-                                    <td class="money">-20.61</td>
-                                    <td>Supermarket</td>
-                                </tr><tr>
-                                    <td>4/27/2016</td>
-                                    <td>CASH WITHDRAW</td>
-                                    <td class="money">-100</td>
-                                    <td>Cash</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="card-list-item" data-target="lens-2" onclick="toggleCardLens(this)">
+                <div class="card-list-item-title">Supermarket</div>
+                <div class="card-list-item-content">
+                    <div class="amount">10.00</div>
+                </div>
+                <div id="lens-2" class="card-list-item-content-lens">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Label</th>
+                                <th class="right">Amount</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>4/28/2016</td>
+                                <td>WAITROSE</td>
+                                <td class="money">-17.9</td>
+                                <td>Supermarket</td>
+                            </tr>
+                            <tr>
+                                <td>4/28/2016</td>
+                                <td>M&amp;S</td>
+                                <td class="money">-20.61</td>
+                                <td>Supermarket</td>
+                            </tr>
+                            <tr>
+                                <td>4/27/2016</td>
+                                <td>CASH WITHDRAW</td>
+                                <td class="money">-100</td>
+                                <td>Cash</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        <div id="mask" onclick="toggleMenu()"></div>
-    </body>
+    </div>
+    <div id="mask" onclick="toggleMenu()"></div>
+</body>
+
 </html>

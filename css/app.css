@@ -2199,23 +2199,19 @@
   .card .card-title {
     padding: 10px; }
   .card .card-content {
-    margin: 10px 0;
-    -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1); }
+    margin: 10px 0; }
     .card .card-content .card-list-item {
       background: white;
       position: relative;
-      border-bottom: 1px solid #C8C9CA;
-      height: 3em;
       width: 100%;
+      -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
       -webkit-transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
       -moz-transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
       -ms-transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
       -o-transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
       transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out; }
-      .card .card-content .card-list-item:last-child {
-        border: none; }
       .card .card-content .card-list-item.expend {
         width: 110%;
         margin: 10px -5% 30px;
@@ -2224,27 +2220,32 @@
         -ms-transition: margin 0.3s ease-in, width 0.3s ease-in, left 0.3s ease-in;
         -o-transition: margin 0.3s ease-in, width 0.3s ease-in, left 0.3s ease-in;
         transition: margin 0.3s ease-in, width 0.3s ease-in, left 0.3s ease-in; }
-      .card .card-content .card-list-item .card-list-item-title {
-        position: absolute;
-        top: 1em;
-        font-weight: 500;
-        left: 5%; }
-      .card .card-content .card-list-item .card-list-item-lens-content {
-        padding: 5px; }
+      .card .card-content .card-list-item dl {
+        width: 100%; }
+      .card .card-content .card-list-item dt {
+        font-weight: 500; }
+      .card .card-content .card-list-item:last-child {
+        border: none; }
       .card .card-content .card-list-item .card-list-item-content {
-        position: absolute;
         top: 1em;
         left: 25%; }
       .card .card-content .card-list-item .card-list-item-content-lens {
         opacity: 0;
-        height: 0;
+        max-height: 0;
         background: white;
-        -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); }
+        -webkit-transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+        -moz-transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+        -ms-transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+        -o-transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-out; }
         .card .card-content .card-list-item .card-list-item-content-lens.expend {
           opacity: 1;
-          height: auto; }
+          max-height: 300px;
+          -webkit-transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s;
+          -moz-transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s;
+          -ms-transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s;
+          -o-transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s;
+          transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s; }
 
 #mask {
   opacity: 0;
