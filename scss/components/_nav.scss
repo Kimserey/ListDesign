@@ -48,6 +48,7 @@ nav {
             background: white;
             visibility: hidden;
             opacity: 0;
+            z-index: 5;
             
             &.show {
                 visibility: visible;

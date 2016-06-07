@@ -11,7 +11,7 @@ function toggleCardLens(el) {
 }
 
 function toggleFilter() {
-    var el = toggle(document.getElementById('filter'));
+    var el = document.getElementById('filter');
 
     if(el.classList.contains('show')) {
         el.classList.remove('show');
