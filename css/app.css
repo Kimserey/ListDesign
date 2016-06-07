@@ -2207,22 +2207,22 @@
       -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
       box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      -webkit-transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
-      -moz-transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
-      -ms-transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
-      -o-transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
-      transition: margin 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out; }
+      -webkit-transition: margin 0.2s ease-out, width 0.2s ease-out, left 0.2s ease-out;
+      -moz-transition: margin 0.2s ease-out, width 0.2s ease-out, left 0.2s ease-out;
+      -ms-transition: margin 0.2s ease-out, width 0.2s ease-out, left 0.2s ease-out;
+      -o-transition: margin 0.2s ease-out, width 0.2s ease-out, left 0.2s ease-out;
+      transition: margin 0.2s ease-out, width 0.2s ease-out, left 0.2s ease-out; }
       .card .card-content .card-list-item.expend {
         width: 105%;
         margin: 30px -2.5%;
         -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-        -webkit-transition: margin 0.3s ease-in, width 0.3s ease-in, left 0.3s ease-in;
-        -moz-transition: margin 0.3s ease-in, width 0.3s ease-in, left 0.3s ease-in;
-        -ms-transition: margin 0.3s ease-in, width 0.3s ease-in, left 0.3s ease-in;
-        -o-transition: margin 0.3s ease-in, width 0.3s ease-in, left 0.3s ease-in;
-        transition: margin 0.3s ease-in, width 0.3s ease-in, left 0.3s ease-in; }
+        -webkit-transition: margin 0.2s ease-in, width 0.2s ease-in, left 0.2s ease-in;
+        -moz-transition: margin 0.2s ease-in, width 0.2s ease-in, left 0.2s ease-in;
+        -ms-transition: margin 0.2s ease-in, width 0.2s ease-in, left 0.2s ease-in;
+        -o-transition: margin 0.2s ease-in, width 0.2s ease-in, left 0.2s ease-in;
+        transition: margin 0.2s ease-in, width 0.2s ease-in, left 0.2s ease-in; }
         .card .card-content .card-list-item.expend:first-child {
           margin-top: 0; }
       .card .card-content .card-list-item .card-list-item-header {
@@ -2243,19 +2243,19 @@
         opacity: 0;
         max-height: 0;
         background: white;
-        -webkit-transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
-        -moz-transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
-        -ms-transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
-        -o-transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
-        transition: max-height 0.5s ease-out, opacity 0.3s ease-out; }
+        -webkit-transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+        -moz-transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+        -ms-transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+        -o-transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+        transition: max-height 0.3s ease-out, opacity 0.2s ease-out; }
         .card .card-content .card-list-item .card-list-item-content.expend {
           opacity: 1;
           max-height: 300px;
-          -webkit-transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s;
-          -moz-transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s;
-          -ms-transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s;
-          -o-transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s;
-          transition: max-height 0.5s ease-in, opacity 0.3s ease-in 0.3s; }
+          -webkit-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;
+          -moz-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;
+          -ms-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;
+          -o-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;
+          transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2; }
         .card .card-content .card-list-item .card-list-item-content table {
           padding: 1em;
           width: 100%; }
