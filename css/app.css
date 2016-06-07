@@ -2195,30 +2195,50 @@
   content: ' GBP'; }
 
 .card {
-  margin: 5em; }
+  margin: 30px 100px 60px 100px; }
   .card .card-title {
-    padding: 1em; }
+    padding: 10px; }
   .card .card-content {
-    background: white;
-    border-collapse: true;
-    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1); }
-    .card .card-content .card-list-item {
+    margin: 10px 0;
+    -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1); }
+    .card .card-content .card-list-item, .card .card-content.lens .card-list-item-lens-header {
+      background: white;
       position: relative;
       border-bottom: 1px solid #C8C9CA;
       height: 3em; }
-      .card .card-content .card-list-item:last-child {
+      .card .card-content .card-list-item:last-child, .card .card-content.lens .card-list-item-lens-header:last-child {
         border: none; }
-      .card .card-content .card-list-item .card-list-item-title {
+      .card .card-content .card-list-item .card-list-item-title, .card .card-content.lens .card-list-item-lens-header .card-list-item-title, .card .card-content.lens .card-list-item-lens-header .card-list-item-lens-title {
         position: absolute;
         top: 1em;
         font-weight: 500;
         left: 5%; }
-      .card .card-content .card-list-item .card-list-item-content {
+      .card .card-content .card-list-item .card-list-item-content, .card .card-content.lens .card-list-item-lens-header .card-list-item-content {
         position: absolute;
         top: 1em;
         left: 25%; }
+    .card .card-content.lens {
+      opacity: 0;
+      margin: 0 -5%;
+      height: 0;
+      background: white;
+      width: 110%;
+      -webkit-transition: 0.5s ease;
+      -moz-transition: 0.5s ease;
+      -ms-transition: 0.5s ease;
+      -o-transition: 0.5s ease;
+      transition: 0.5s ease;
+      -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); }
+      .card .card-content.lens .card-list-item-lens-content {
+        padding: 5px; }
+      .card .card-content.lens.show {
+        opacity: 1;
+        height: auto;
+        margin: 30px -5%; }
 
 #mask {
   opacity: 0;

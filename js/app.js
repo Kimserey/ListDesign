@@ -1,19 +1,17 @@
-function toggleFilter() {
-    var filter = document.getElementById('filter');
-    
-    var show = function () {
-        filter.classList.add('show');
-    }
-    
-    var hide = function () {
-        filter.classList.remove('show');
-    }
-    
-    if(filter.classList.contains('show')) {
-        hide();
+function toggle(el) {
+    if(el.classList.contains('show')) {
+        el.classList.remove('show');
     } else {
-        show();
+        el.classList.add('show');
     }
+}
+
+function toggleCardLens(el) {
+    toggle(document.getElementById(el.dataset.target));
+}
+
+function toggleFilter() {
+    toggle(document.getElementById('filter'));
 }
 
 function toggleMenu() {

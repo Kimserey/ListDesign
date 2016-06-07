@@ -4,12 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Expenses</title>
         <link rel="stylesheet" href="css/app.css">
-        <script src="js/nav.js"></script>
+        <script src="js/app.js"></script>
     </head>
     <body>
         <header>
             Expenses - Sorted per month
         </header>
+
         <nav>
             <button class="nav-menu" onclick="toggleMenu()">
                 <i class="fa fa-bars"></i>
@@ -53,14 +54,17 @@
         <div class="card">
             <div class="card-title">April 2016</div>
             <div class="card-content">
-                <div class="card-list-item">
+                <div class="card-list-item" data-target="lens-1" onclick="toggleCardLens(this)">
                     <div class="card-list-item-title">Supermarket</div>
                     <div class="card-list-item-content">
                         <div class="amount">10.00</div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-content">
+                <div id="lens-1" class="card-content lens">
+                    <div class="card-list-item-lens-header">
+                        <div class="card-list-item-lens-title">Supermarket 10.00GBP</div>
+                    </div>
+                    <div class="card-list-item-lens-content">
                         <table>
                             <thead>
                                 <tr>
@@ -92,22 +96,87 @@
                     </div>
                 </div>
 
-                <div class="card-list-item">
+                <div class="card-list-item" data-target="lens-2" onclick="toggleCardLens(this)">
                     <div class="card-list-item-title">Supermarket</div>
                     <div class="card-list-item-content">
                         <div class="amount">10.00</div>
                     </div>
                 </div>
-                <div class="card-list-item">
+                <div id="lens-2" class="card-content lens">
+                    <div class="card-list-item-lens-header">
+                        <div class="card-list-item-lens-title">Supermarket 10.00GBP</div>
+                    </div>
+                    <div class="card-list-item-lens-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr><tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr><tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card-list-item" data-target="lens-3" onclick="toggleCardLens(this)">
                     <div class="card-list-item-title">Clothes</div>
                     <div class="card-list-item-content">
                         <div class="amount">10.00</div>
                     </div>
                 </div>
-                <div class="card-list-item">
-                    <div class="card-list-item-title">Restaurant</div>
-                    <div class="card-list-item-content">
-                        <div class="amount">10.00</div>
+                <div id="lens-3" class="card-content lens">
+                    <div class="card-list-item-lens-header">
+                        <div class="card-list-item-lens-title">Supermarket 10.00GBP</div>
+                    </div>
+                    <div class="card-list-item-lens-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr><tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr><tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
