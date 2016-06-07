@@ -2271,7 +2271,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 5;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -2293,6 +2293,7 @@ header {
   padding: 1em 3.5em;
   font-size: large;
   width: 100%;
+  z-index: 5;
   -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1); }
@@ -2308,7 +2309,8 @@ nav .nav-button, nav .nav-menu, nav .nav-menu-right button {
   cursor: pointer;
   position: fixed;
   top: 1em;
-  font-size: large; }
+  font-size: large;
+  z-index: 5; }
 
 nav .nav-menu {
   left: 1em; }
@@ -2332,7 +2334,7 @@ nav .nav-menu-right .filter {
   background: white;
   visibility: hidden;
   opacity: 0;
-  z-index: 5; }
+  z-index: 15; }
   nav .nav-menu-right .filter.show {
     visibility: visible;
     opacity: 1;
@@ -2354,7 +2356,7 @@ nav #side-menu {
   background: white;
   overflow-y: scroll;
   height: 100%;
-  z-index: 5;
+  z-index: 15;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
