@@ -2237,6 +2237,25 @@
           position: absolute;
           top: 1em;
           right: 1em; }
+        .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          padding: 1em;
+          right: 0;
+          background: white;
+          border-left: 2px dotted #C8C9CA;
+          cursor: pointer;
+          -webkit-transition: 0.3s;
+          -moz-transition: 0.3s;
+          -ms-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+          .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action:hover {
+            background: #C8C9CA; }
+        .card .card-content .card-list-item .card-list-item-header:hover .card-list-item-header-action {
+          opacity: 1;
+          visibility: visible; }
       .card .card-content .card-list-item:last-child {
         border: none; }
       .card .card-content .card-list-item .card-list-item-content {

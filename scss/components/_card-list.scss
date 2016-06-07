@@ -54,6 +54,27 @@
                     top: 1em;
                     right: 1em;
                 }
+
+                .card-list-item-header-action {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    padding: 1em;
+                    right: 0;
+                    background: white;
+                    border-left: 2px dotted $grey-light;
+                    cursor: pointer;
+                    @include transition(0.3s);
+
+                    &:hover {
+                        background: $grey-light;
+                    }
+                }
+
+                &:hover .card-list-item-header-action {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
 
             &:last-child {
