@@ -2191,18 +2191,34 @@
   overflow: visible;
   clip: auto; }
 
-.card-list {
+.amount:after {
+  content: ' GBP'; }
+
+.card {
   margin: 5em; }
-  .card-list .title {
+  .card .card-title {
     padding: 1em; }
-  .card-list .list {
+  .card .card-content {
     background: white;
     border-collapse: true;
     -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1); }
-    .card-list .list .list-item {
-      border: 1px solid #C8C9CA; }
+    .card .card-content .card-list-item {
+      position: relative;
+      border-bottom: 1px solid #C8C9CA;
+      height: 3em; }
+      .card .card-content .card-list-item:last-child {
+        border: none; }
+      .card .card-content .card-list-item .card-list-item-title {
+        position: absolute;
+        top: 1em;
+        font-weight: 500;
+        left: 5%; }
+      .card .card-content .card-list-item .card-list-item-content {
+        position: absolute;
+        top: 1em;
+        left: 25%; }
 
 #mask {
   opacity: 0;

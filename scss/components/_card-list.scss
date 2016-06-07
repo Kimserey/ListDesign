@@ -1,17 +1,42 @@
-.card-list {
+.amount {
+    &:after {
+        content: ' GBP';
+    }
+}
+
+.card {
     margin: 5em;
 
-    .title {
+    .card-title {
         padding: 1em;
     }
     
-    .list {
+    .card-content {
         background: $white;
         border-collapse: true; 
         @include box-shadow(0 1px 0px rgba(0,0,0,.1));
         
-        .list-item {
-            border: 1px solid $grey-light;
+        .card-list-item {
+            position: relative;
+            border-bottom: 1px solid $grey-light;
+            height: 3em;
+
+            &:last-child {
+                border: none;
+            }
+
+            .card-list-item-title {
+                position: absolute;
+                top: 1em;
+                font-weight: 500;
+                left: 5%;
+            }
+            
+            .card-list-item-content {
+                position: absolute;
+                top: 1em;
+                left:25%;
+            }
         }
     }
 }
