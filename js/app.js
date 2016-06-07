@@ -1,17 +1,23 @@
-function toggle(el) {
+function toggleCardLens(el) {
+    var content = document.getElementById(el.dataset.target);
+
+    if(el.classList.contains('expend')) {
+        el.classList.remove('expend');
+        content.classList.remove('expend');
+    } else {
+        el.classList.add('expend');
+        content.classList.add('expend');
+    }
+}
+
+function toggleFilter() {
+    var el = toggle(document.getElementById('filter'));
+
     if(el.classList.contains('show')) {
         el.classList.remove('show');
     } else {
         el.classList.add('show');
     }
-}
-
-function toggleCardLens(el) {
-    toggle(document.getElementById(el.dataset.target));
-}
-
-function toggleFilter() {
-    toggle(document.getElementById('filter'));
 }
 
 function toggleMenu() {

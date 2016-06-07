@@ -20,9 +20,19 @@
             position: relative;
             border-bottom: 1px solid $grey-light;
             height: 3em;
+            margin-top: 0;
+            margin-bottom: 0;
+            @include transition(margin-bottom 0.3s linear);
+            @include transition(margin-top 0.3s linear);
+            @include transition(width 0.3s linear);
 
             &:last-child {
                 border: none;
+            }
+
+            &.expend {
+                width: 110%;
+                margin: 10px -5% 30px;
             }
 
             .card-list-item-title {
@@ -31,39 +41,27 @@
                 font-weight: 500;
                 left: 5%;
             }
+                
+            .card-list-item-lens-content {
+                padding: 5px;
+            }
             
             .card-list-item-content {
                 position: absolute;
                 top: 1em;
                 left:25%;
             }
-        }
 
-        &.lens {
-            opacity: 0;
-            margin: 0 -5%;
-            height: 0;
-            background: $white;
-            width: 110%;  
-            @include transition(0.5s ease);
-            @include box-shadow(2px 2px 1px rgba(0,0,0,.1));
-            
-            .card-list-item-lens-header {
-                @extend .card-list-item;
+            .card-list-item-content-lens {
+                opacity: 0;
+                height: 0;
+                background: $white;
+                @include box-shadow(2px 2px 1px rgba(0,0,0,.1));
 
-                .card-list-item-lens-title {
-                    @extend .card-list-item-title;
+                &.expend {
+                    opacity: 1;
+                    height: auto;
                 }
-            }
-            
-            .card-list-item-lens-content {
-                padding: 5px;
-            }
-
-            &.show {
-                opacity: 1;
-                height: auto;
-                margin: 30px -5%;
             }
         }
     }

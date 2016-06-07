@@ -2203,42 +2203,54 @@
     -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1); }
-    .card .card-content .card-list-item, .card .card-content.lens .card-list-item-lens-header {
+    .card .card-content .card-list-item {
       background: white;
       position: relative;
       border-bottom: 1px solid #C8C9CA;
-      height: 3em; }
-      .card .card-content .card-list-item:last-child, .card .card-content.lens .card-list-item-lens-header:last-child {
+      height: 3em;
+      margin-top: 0;
+      margin-bottom: 0;
+      -webkit-transition: margin-bottom 0.3s linear;
+      -moz-transition: margin-bottom 0.3s linear;
+      -ms-transition: margin-bottom 0.3s linear;
+      -o-transition: margin-bottom 0.3s linear;
+      transition: margin-bottom 0.3s linear;
+      -webkit-transition: margin-top 0.3s linear;
+      -moz-transition: margin-top 0.3s linear;
+      -ms-transition: margin-top 0.3s linear;
+      -o-transition: margin-top 0.3s linear;
+      transition: margin-top 0.3s linear;
+      -webkit-transition: width 0.3s linear;
+      -moz-transition: width 0.3s linear;
+      -ms-transition: width 0.3s linear;
+      -o-transition: width 0.3s linear;
+      transition: width 0.3s linear; }
+      .card .card-content .card-list-item:last-child {
         border: none; }
-      .card .card-content .card-list-item .card-list-item-title, .card .card-content.lens .card-list-item-lens-header .card-list-item-title, .card .card-content.lens .card-list-item-lens-header .card-list-item-lens-title {
+      .card .card-content .card-list-item.expend {
+        width: 110%;
+        margin: 10px -5% 30px; }
+      .card .card-content .card-list-item .card-list-item-title {
         position: absolute;
         top: 1em;
         font-weight: 500;
         left: 5%; }
-      .card .card-content .card-list-item .card-list-item-content, .card .card-content.lens .card-list-item-lens-header .card-list-item-content {
+      .card .card-content .card-list-item .card-list-item-lens-content {
+        padding: 5px; }
+      .card .card-content .card-list-item .card-list-item-content {
         position: absolute;
         top: 1em;
         left: 25%; }
-    .card .card-content.lens {
-      opacity: 0;
-      margin: 0 -5%;
-      height: 0;
-      background: white;
-      width: 110%;
-      -webkit-transition: 0.5s ease;
-      -moz-transition: 0.5s ease;
-      -ms-transition: 0.5s ease;
-      -o-transition: 0.5s ease;
-      transition: 0.5s ease;
-      -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-      box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); }
-      .card .card-content.lens .card-list-item-lens-content {
-        padding: 5px; }
-      .card .card-content.lens.show {
-        opacity: 1;
-        height: auto;
-        margin: 30px -5%; }
+      .card .card-content .card-list-item .card-list-item-content-lens {
+        opacity: 0;
+        height: 0;
+        background: white;
+        -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); }
+        .card .card-content .card-list-item .card-list-item-content-lens.expend {
+          opacity: 1;
+          height: auto; }
 
 #mask {
   opacity: 0;
