@@ -1,4 +1,4 @@
-# Css stuff
+# Design a list with meaningful transitions
 
 Setup with gulp and Visual studio code.
 
