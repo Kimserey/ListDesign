@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expenses</title>
     <link rel="stylesheet" href="css/app.css">
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/chart.js"></script>
+
+    <script src="js/lib/jquery-2.1.3.min.js"></script>
+    <script src="js/lib/chart.js"></script>
+
     <script src="js/app.js"></script>
+    <script src="js/app-chart-sample.js"></script>
 </head>
 
 <body>
@@ -55,617 +58,469 @@
         </div>
     </nav>
 
-    <div class="card">
-        <div class="card-title">April 2016</div>
-        <div class="card-content">
-            <div class="card-list-item" data-target="lens-1" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
+    <div class="panel list">
+
+        <div class="card">
+            <div class="card-title">April 2016</div>
+            <div class="card-content">
+                <div class="card-list-item" data-target="lens-1" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <div id="lens-1" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div id="lens-1" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <div class="card-list-item" data-target="lens-2" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div id="lens-2" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card-list-item" data-target="lens-3" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div id="lens-3" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="card-list-item" data-target="lens-2" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
+        <div class="card">
+            <div class="card-title">March 2016</div>
+            <div class="card-content">
+                <div class="card-list-item" data-target="lens-4" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <div id="lens-4" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div id="lens-2" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <div class="card-list-item" data-target="lens-5" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div id="lens-5" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card-list-item" data-target="lens-6" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div id="lens-6" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="card-list-item" data-target="lens-3" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
+        <div class="card">
+            <div class="card-title">February 2016</div>
+            <div class="card-content">
+                <div class="card-list-item" data-target="lens-7" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <div id="lens-7" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div id="lens-3" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <div class="card-list-item" data-target="lens-8" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div id="lens-8" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card-list-item" data-target="lens-9" onclick="toggleCardLens(this)">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Supermarket
+                        </div>
+                        <div class="card-list-item-header-subtitle">
+                            <div class="amount">10.00</div>
+                        </div>
+                        <div class="card-list-item-header-action">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div id="lens-9" class="card-list-item-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Label</th>
+                                    <th class="right">Amount</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>WAITROSE</td>
+                                    <td class="money">-17.9</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2016</td>
+                                    <td>M&amp;S</td>
+                                    <td class="money">-20.61</td>
+                                    <td>Supermarket</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2016</td>
+                                    <td>CASH WITHDRAW</td>
+                                    <td class="money">-100</td>
+                                    <td>Cash</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-title">March 2016</div>
-        <div class="card-content">
-            <div class="card-list-item" data-target="lens-4" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
-                    </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div id="lens-4" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+    <div class="panel graph">
+        <div class="card">
+            <div class="card-title">
+                Supermarket
             </div>
-
-            <div class="card-list-item" data-target="lens-5" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
+            <div class="card-content">
+                <div class="card-list-item">
+                    <div class="card-list-item-header">
+                        <div class="card-list-item-header-title">
+                            Prices
+                        </div>
                     </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
+                    <div class="card-list-item-content-lens show">
+                        <div class="chart-panel">
+                            <div style="width:90%;">
+                                <canvas id="canvas"></canvas>
+                            </div>
+                            <br>
+                            <br>
+                            <button id="randomizeData">Randomize Data</button>
+                            <button id="changeDataObject">Change Data Object</button>
+                            <button id="addDataset">Add Dataset</button>
+                            <button id="removeDataset">Remove Dataset</button>
+                            <button id="addData">Add Data</button>
+                            <button id="removeData">Remove Data</button>
+                        </div>
                     </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div id="lens-5" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="card-list-item" data-target="lens-6" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
-                    </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div id="lens-6" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="card">
-        <div class="card-title">February 2016</div>
-        <div class="card-content">
-            <div class="card-list-item" data-target="lens-7" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
-                    </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div id="lens-7" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="card-list-item" data-target="lens-8" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
-                    </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div id="lens-8" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="card-list-item" data-target="lens-9" onclick="toggleCardLens(this)">
-                <div class="card-list-item-header">
-                    <div class="card-list-item-header-title">
-                        Supermarket
-                    </div>
-                    <div class="card-list-item-header-subtitle">
-                        <div class="amount">10.00</div>
-                    </div>
-                    <div class="card-list-item-header-action">
-                        <i class="fa fa-line-chart" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div id="lens-9" class="card-list-item-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Label</th>
-                                <th class="right">Amount</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>WAITROSE</td>
-                                <td class="money">-17.9</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/28/2016</td>
-                                <td>M&amp;S</td>
-                                <td class="money">-20.61</td>
-                                <td>Supermarket</td>
-                            </tr>
-                            <tr>
-                                <td>4/27/2016</td>
-                                <td>CASH WITHDRAW</td>
-                                <td class="money">-100</td>
-                                <td>Cash</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="chart-panel">
-        <div style="width:75%;">
-            <canvas id="canvas"></canvas>
-        </div>
-        <br>
-        <br>
-        <button id="randomizeData">Randomize Data</button>
-        <button id="changeDataObject">Change Data Object</button>
-        <button id="addDataset">Add Dataset</button>
-        <button id="removeDataset">Remove Dataset</button>
-        <button id="addData">Add Data</button>
-        <button id="removeData">Remove Data</button>
-        <script>
-        var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        
-        var randomScalingFactor = function() {
-            return Math.round(Math.random() * 100);
-            //return 0;
-        };
-        var randomColorFactor = function() {
-            return Math.round(Math.random() * 255);
-        };
-        var randomColor = function(opacity) {
-            return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
-        };
-        var config = {
-            type: 'line',
-            data: {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
-                datasets: [{
-                    label: "My First dataset",
-                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                    fill: false,
-                    borderDash: [5, 5],
-                }, {
-                    hidden: true,
-                    label: 'hidden dataset',
-                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                }, {
-                    label: "My Second dataset",
-                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                }]
-            },
-            options: {
-                responsive: true,
-                title:{
-                    display:true,
-                    text:'Chart.js Line Chart'
-                },
-                tooltips: {
-                    mode: 'label',
-                    callbacks: {
-                        // beforeTitle: function() {
-                        //     return '...beforeTitle';
-                        // },
-                        // afterTitle: function() {
-                        //     return '...afterTitle';
-                        // },
-                        // beforeBody: function() {
-                        //     return '...beforeBody';
-                        // },
-                        // afterBody: function() {
-                        //     return '...afterBody';
-                        // },
-                        // beforeFooter: function() {
-                        //     return '...beforeFooter';
-                        // },
-                        // footer: function() {
-                        //     return 'Footer';
-                        // },
-                        // afterFooter: function() {
-                        //     return '...afterFooter';
-                        // },
-                    }
-                },
-                hover: {
-                    mode: 'dataset'
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            show: true,
-                            labelString: 'Month'
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            show: true,
-                            labelString: 'Value'
-                        },
-                        ticks: {
-                            suggestedMin: -10,
-                            suggestedMax: 250,
-                        }
-                    }]
-                }
-            }
-        };
-        $.each(config.data.datasets, function(i, dataset) {
-            dataset.borderColor = randomColor(0.4);
-            dataset.backgroundColor = randomColor(0.5);
-            dataset.pointBorderColor = randomColor(0.7);
-            dataset.pointBackgroundColor = randomColor(0.5);
-            dataset.pointBorderWidth = 1;
-        });
-        window.onload = function() {
-            var ctx = document.getElementById("canvas").getContext("2d");
-            window.myLine = new Chart(ctx, config);
-        };
-        $('#randomizeData').click(function() {
-            $.each(config.data.datasets, function(i, dataset) {
-                dataset.data = dataset.data.map(function() {
-                    return randomScalingFactor();
-                });
-            });
-            window.myLine.update();
-        });
-        $('#changeDataObject').click(function() {
-            config.data = {
-                labels: ["July", "August", "September", "October", "November", "December"],
-                datasets: [{
-                    label: "My First dataset",
-                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                    fill: false,
-                }, {
-                    label: "My Second dataset",
-                    fill: false,
-                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                }]
-            };
-            $.each(config.data.datasets, function(i, dataset) {
-                dataset.borderColor = randomColor(0.4);
-                dataset.backgroundColor = randomColor(0.5);
-                dataset.pointBorderColor = randomColor(0.7);
-                dataset.pointBackgroundColor = randomColor(0.5);
-                dataset.pointBorderWidth = 1;
-            });
-            // Update the chart
-            window.myLine.update();
-        });
-        $('#addDataset').click(function() {
-            var newDataset = {
-                label: 'Dataset ' + config.data.datasets.length,
-                borderColor: randomColor(0.4),
-                backgroundColor: randomColor(0.5),
-                pointBorderColor: randomColor(0.7),
-                pointBackgroundColor: randomColor(0.5),
-                pointBorderWidth: 1,
-                data: [],
-            };
-            for (var index = 0; index < config.data.labels.length; ++index) {
-                newDataset.data.push(randomScalingFactor());
-            }
-            config.data.datasets.push(newDataset);
-            window.myLine.update();
-        });
-        $('#addData').click(function() {
-            if (config.data.datasets.length > 0) {
-                var month = MONTHS[config.data.labels.length % MONTHS.length];
-                config.data.labels.push(month);
-                $.each(config.data.datasets, function(i, dataset) {
-                    dataset.data.push(randomScalingFactor());
-                });
-                window.myLine.update();
-            }
-        });
-        $('#removeDataset').click(function() {
-            config.data.datasets.splice(0, 1);
-            window.myLine.update();
-        });
-        $('#removeData').click(function() {
-            config.data.labels.splice(-1, 1); // remove the label first
-            config.data.datasets.forEach(function(dataset, datasetIndex) {
-                dataset.data.pop();
-            });
-            window.myLine.update();
-        });
-    </script>
-    </div>
-
     <div id="mask" onclick="toggleMenu()"></div>
 </body>
 
