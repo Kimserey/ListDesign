@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="js/lib/jquery-2.1.3.min.js"></script>
+
+    <script src="js/side-menu.js"></script>
+</head>
+
+<body>
+    <header>
+        Expenses - Sorted per month
+    </header>
+
+    <nav id="nav">
+        <button id="side-menu-btn" class="nav-menu">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="nav-menu-right">
+            <button onclick="toggleFilter()">
+                <i class="fa fa-filter" aria-hidden="true"></i>
+            </button>
+            <div id="filter" class="filter">
+                <ul>
+                    <li><label><input type="checkbox">&nbsp;Restaurant</label><br></li>
+                    <li><label><input type="checkbox">&nbsp;Supermarket</label><br></li>
+                    <li><label><input type="checkbox">&nbsp;Other</label><br></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="side-menu">
+            <div class="brand">
+                Data expenses
+            </div>
+            <dl>
+                <dt>
+                    Expenses
+                </dt>
+                <dd>
+                    <a href="#"> Per month </a>
+                    <a href="#"> Per category </a>
+                </dd>
+                <dt>
+                    Shops
+                </dt>
+                <dd>
+                    <a> All shops</a>
+                </dd>
+            </dl>
+        </div>
+    </nav>
+
+    <div id="mask"></div>
+</body>
+
+</html>

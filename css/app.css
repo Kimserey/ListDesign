@@ -2264,6 +2264,7 @@
         border: none; }
       .card .card-content .card-list-item .card-list-item-content {
         opacity: 0;
+        visibility: hidden;
         max-height: 0;
         background: white;
         -webkit-transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
@@ -2273,6 +2274,7 @@
         transition: max-height 0.3s ease-out, opacity 0.2s ease-out; }
         .card .card-content .card-list-item .card-list-item-content.active {
           opacity: 1;
+          visibility: visible;
           max-height: 300px;
           -webkit-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;
           -moz-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;

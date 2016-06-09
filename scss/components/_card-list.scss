@@ -87,6 +87,7 @@
             
             .card-list-item-content {
                 opacity: 0;
+                visibility: hidden;
                 max-height: 0;
                 background: $white;
                 @include transition(
@@ -95,6 +96,7 @@
 
                 &.active {
                     opacity: 1;
+                    visibility: visible;
                     max-height: 300px;
                     @include transition(
                         max-height 0.3s ease-in,
