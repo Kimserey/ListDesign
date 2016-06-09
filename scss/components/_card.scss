@@ -54,31 +54,6 @@
                     top: 1em;
                     right: 1em;
                 }
-
-                .card-list-item-header-action {
-                    opacity: 0;
-                    visibility: hidden;
-                    position: absolute;
-                    padding: 1em;
-                    width: 1.5em;
-                    height: 1em;
-                    right: 0;
-                    border-left: 2px dotted $grey-light;
-                    cursor: pointer;
-                    background: $white;
-                    @include transition(0.3s);
-
-                    &.active, &:hover {
-                        opacity: 1;
-                        visibility: visible;
-                        background: $grey-very-light;
-                    }
-                }
-
-                &:hover .card-list-item-header-action {
-                    opacity: 1;
-                    visibility: visible;
-                }
             }
 
             &:last-child {
@@ -101,25 +76,6 @@
                     @include transition(
                         max-height 0.3s ease-in,
                         opacity 0.2s ease-in 0.2);
-                }
-
-                table {
-                    padding: 1em;
-                    width: 100%;
-
-                    th, td {
-                        text-align: left;
-                    }
-                }
-
-                .content {
-                    opacity: 0;
-                    visibility: hidden;
-
-                    &.active {
-                        opacity: 1;
-                        visibility: visible;
-                    }
                 }
             }
         }

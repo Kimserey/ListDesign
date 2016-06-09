@@ -2237,29 +2237,6 @@
           position: absolute;
           top: 1em;
           right: 1em; }
-        .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action {
-          opacity: 0;
-          visibility: hidden;
-          position: absolute;
-          padding: 1em;
-          width: 1.5em;
-          height: 1em;
-          right: 0;
-          border-left: 2px dotted #C8C9CA;
-          cursor: pointer;
-          background: white;
-          -webkit-transition: 0.3s;
-          -moz-transition: 0.3s;
-          -ms-transition: 0.3s;
-          -o-transition: 0.3s;
-          transition: 0.3s; }
-          .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action.active, .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action:hover {
-            opacity: 1;
-            visibility: visible;
-            background: #F7F7F7; }
-        .card .card-content .card-list-item .card-list-item-header:hover .card-list-item-header-action {
-          opacity: 1;
-          visibility: visible; }
       .card .card-content .card-list-item:last-child {
         border: none; }
       .card .card-content .card-list-item .card-list-item-content {
@@ -2281,17 +2258,6 @@
           -ms-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;
           -o-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;
           transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2; }
-        .card .card-content .card-list-item .card-list-item-content table {
-          padding: 1em;
-          width: 100%; }
-          .card .card-content .card-list-item .card-list-item-content table th, .card .card-content .card-list-item .card-list-item-content table td {
-            text-align: left; }
-        .card .card-content .card-list-item .card-list-item-content .content {
-          opacity: 0;
-          visibility: hidden; }
-          .card .card-content .card-list-item .card-list-item-content .content.active {
-            opacity: 1;
-            visibility: visible; }
 
 #mask {
   opacity: 0;
@@ -2311,10 +2277,6 @@
   #mask.show {
     opacity: 1;
     visibility: visible; }
-
-.grid-row .grid-column {
-  display: inline-block;
-  width: 30%; }
 
 header {
   position: fixed;
@@ -2410,20 +2372,12 @@ nav #side-menu {
       color: #808080; }
 
 .table-card {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: white;
-  margin: 2em;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  .table-card:hover {
-    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); }
   .table-card .table-title {
     padding: 1em 0.6em;
     font-size: x-large; }
@@ -2450,33 +2404,6 @@ nav #side-menu {
         text-align: right; }
       .table-card table tbody td.money:after {
         content: " GBP"; }
-      .table-card table tbody td[colspan] {
-        padding: 0; }
-        .table-card table tbody td[colspan] table {
-          position: relative;
-          top: -0.5em;
-          background-color: white;
-          -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-          -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); }
-    .table-card table tfoot .pagination {
-      float: right;
-      font-size: x-large;
-      padding: 0.2em 1em; }
-      .table-card table tfoot .pagination .pagination-button, .table-card table tfoot .pagination .pagination-previous, .table-card table tfoot .pagination .pagination-next {
-        display: inline-block;
-        cursor: pointer; }
-        .table-card table tfoot .pagination .pagination-button:hover, .table-card table tfoot .pagination .pagination-previous:hover, .table-card table tfoot .pagination .pagination-next:hover {
-          text-decoration: underline; }
-        .table-card table tfoot .pagination .pagination-button.disabled, .table-card table tfoot .pagination .disabled.pagination-previous, .table-card table tfoot .pagination .disabled.pagination-next {
-          color: #F7F7F7;
-          cursor: no-drop; }
-          .table-card table tfoot .pagination .pagination-button.disabled:hover, .table-card table tfoot .pagination .disabled.pagination-previous:hover, .table-card table tfoot .pagination .disabled.pagination-next:hover {
-            text-decoration: none; }
-      .table-card table tfoot .pagination .pagination-previous:after {
-        content: "<"; }
-      .table-card table tfoot .pagination .pagination-next:after {
-        content: ">"; }
 
 body {
   font-family: 'Roboto', sans-serif;
