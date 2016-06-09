@@ -2212,7 +2212,7 @@
       -ms-transition: margin 0.2s ease-out, width 0.2s ease-out, left 0.2s ease-out;
       -o-transition: margin 0.2s ease-out, width 0.2s ease-out, left 0.2s ease-out;
       transition: margin 0.2s ease-out, width 0.2s ease-out, left 0.2s ease-out; }
-      .card .card-content .card-list-item.expend {
+      .card .card-content .card-list-item.active {
         width: 105%;
         margin: 30px -2.5%;
         -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
@@ -2223,7 +2223,7 @@
         -ms-transition: margin 0.2s ease-in, width 0.2s ease-in, left 0.2s ease-in;
         -o-transition: margin 0.2s ease-in, width 0.2s ease-in, left 0.2s ease-in;
         transition: margin 0.2s ease-in, width 0.2s ease-in, left 0.2s ease-in; }
-        .card .card-content .card-list-item.expend:first-child {
+        .card .card-content .card-list-item.active:first-child {
           margin-top: 0; }
       .card .card-content .card-list-item .card-list-item-header {
         height: 3em;
@@ -2271,7 +2271,7 @@
         -ms-transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
         -o-transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
         transition: max-height 0.3s ease-out, opacity 0.2s ease-out; }
-        .card .card-content .card-list-item .card-list-item-content.expend {
+        .card .card-content .card-list-item .card-list-item-content.active {
           opacity: 1;
           max-height: 300px;
           -webkit-transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2;
@@ -2284,6 +2284,12 @@
           width: 100%; }
           .card .card-content .card-list-item .card-list-item-content table th, .card .card-content .card-list-item .card-list-item-content table td {
             text-align: left; }
+        .card .card-content .card-list-item .card-list-item-content .content {
+          opacity: 0;
+          visibility: hidden; }
+          .card .card-content .card-list-item .card-list-item-content .content.active {
+            opacity: 1;
+            visibility: visible; }
 
 #mask {
   opacity: 0;

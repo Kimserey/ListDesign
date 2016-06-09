@@ -24,7 +24,7 @@
                 width 0.2s ease-out,
                 left 0.2s ease-out);
 
-            &.expend {
+            &.active {
                 width: 105%;
                 margin: 30px -2.5%;
                 @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
@@ -93,7 +93,7 @@
                     max-height 0.3s ease-out,
                     opacity 0.2s ease-out);
 
-                &.expend {
+                &.active {
                     opacity: 1;
                     max-height: 300px;
                     @include transition(
@@ -107,6 +107,16 @@
 
                     th, td {
                         text-align: left;
+                    }
+                }
+
+                .content {
+                    opacity: 0;
+                    visibility: hidden;
+
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
                     }
                 }
             }

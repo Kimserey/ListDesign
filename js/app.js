@@ -11,6 +11,9 @@ function toggleCardDetails(el) {
     //expend title and details
     $(el).toggleClass('expend');
     $('#' + el.dataset.target).toggleClass('expend');
+
+
+    console.log(el.id);
 }
 
 function toggleFilter() {
@@ -26,3 +29,25 @@ function toggleMenu() {
     $('#side-menu').toggleClass('show');
     toggleMask();
 }
+
+$(function() {
+    $('.card-list-item')
+        .click(function (e) {
+            $(this).toggleClass('active');
+            var content = $(this).data('toggle');
+            var target = $(this).data('display');
+            $('#' + content).toggleClass('active');
+            $('.' + target).toggleClass('active');
+        });
+
+    $('.card-list-item-header-action')
+        .click(function (e) {
+            var content = $(this).data('toggle');
+            var target = $(this).data('display');
+
+            $(this).toggleClass('active');
+            $(this).parent().toggleClass('active');
+            $('#' + content).toggleClass('active');
+            $('.' + target).toggleClass('active');
+        });
+});
