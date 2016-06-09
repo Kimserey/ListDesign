@@ -61,24 +61,17 @@
                     position: absolute;
                     padding: 1em;
                     width: 1.5em;
-                    height: 1.5em;
+                    height: 1em;
                     right: 0;
                     border-left: 2px dotted $grey-light;
                     cursor: pointer;
-                    background: $grey-light;
-                    @include transition(1s);
+                    background: $white;
+                    @include transition(0.3s);
 
-                    &:hover {
-                        background: $grey-light;
-                    }
-
-                    &.active {
+                    &.active, &:hover {
                         opacity: 1;
                         visibility: visible;
-                        width: 97.5%;
-                        height: 100%;
-                        border-left: none;
-                        @include transition(1s);
+                        background: $grey-very-light;
                     }
                 }
 

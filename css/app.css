@@ -2191,25 +2191,6 @@
   overflow: visible;
   clip: auto; }
 
-.modal {
-  opacity: 0;
-  width: 90%;
-  visibility: hidden;
-  position: relative;
-  background: white;
-  z-index: 10;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; }
-  .modal.show {
-    opacity: 1;
-    visibility: visible;
-    top: 6em;
-    left: 5%;
-    bottom: 6em; }
-
 .amount:after {
   content: ' GBP'; }
 
@@ -2262,29 +2243,20 @@
           position: absolute;
           padding: 1em;
           width: 1.5em;
-          height: 1.5em;
+          height: 1em;
           right: 0;
           border-left: 2px dotted #C8C9CA;
           cursor: pointer;
-          background: #C8C9CA;
-          -webkit-transition: 1s;
-          -moz-transition: 1s;
-          -ms-transition: 1s;
-          -o-transition: 1s;
-          transition: 1s; }
-          .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action:hover {
-            background: #C8C9CA; }
-          .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action.active {
+          background: white;
+          -webkit-transition: 0.3s;
+          -moz-transition: 0.3s;
+          -ms-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+          .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action.active, .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action:hover {
             opacity: 1;
             visibility: visible;
-            width: 97.5%;
-            height: 100%;
-            border-left: none;
-            -webkit-transition: 1s;
-            -moz-transition: 1s;
-            -ms-transition: 1s;
-            -o-transition: 1s;
-            transition: 1s; }
+            background: #F7F7F7; }
         .card .card-content .card-list-item .card-list-item-header:hover .card-list-item-header-action {
           opacity: 1;
           visibility: visible; }
