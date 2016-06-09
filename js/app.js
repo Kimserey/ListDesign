@@ -1,27 +1,50 @@
-// function toggleCardDetails(el) {
-//     //reset all expended card item
-//     $('.card-list-item, .card-list-item-content')
-//         .not('#' + el.id + "," + '#' + el.dataset.target)
-//         .removeClass('expend');
+//****************************
+//      CARD
+//****************************
 
-//     //expend title and details
-//     $(el).toggleClass('expend');
-//     $('#' + el.dataset.target).toggleClass('expend');
+(function ($) {
+    var _active_ = 'active';
+
+    function expendCard ($this) {
+        $this.addClass(_active_);
+        $('#' + $this.data().content).addClass(_active_);
+    }
+
+    function hideCard ($this) {
+        $this.removeClass(_active_);
+        $('#' + $this.data().content).removeClass(_active_);
+    }
+
+    $(document).ready(function () {
+        $('.card-list-item').click(function () {
+            if ($(this).hasClass(_active_)) {
+                hideCard($(this));
+            } else {
+                expendCard($(this));
+            }
+        });
+    });
+}(jQuery));
 
 
-//     console.log(el.id);
-// }
+//****************************
+//      SIDE MENU
+//****************************
 
-// function toggleFilter() {
-//     $('#filter').toggleClass('show');
-// }
+(function ($) {
+    $(document).ready(function () {
+        var _show_ = 'show';
+        var $sidemenu = $('#side-menu');
+        var $mask = $('#mask');
 
-// function toggleMask() {
-//     $('#mask').toggleClass('show');
-//     $('body').toggleClass('disable-scroll');
-// }
+        $('#side-menu-button').click(function () {
+            $sidemenu.addClass(_show_);
+            $mask.addClass(_show_);
+        });
 
-// function toggleMenu() {
-//     $('#side-menu').toggleClass('show');
-//     toggleMask();
-// }
+        $mask.click(function () {
+            $sidemenu.removeClass(_show_);
+            $mask.removeClass(_show_);
+        })
+    });
+}(jQuery));
