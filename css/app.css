@@ -2191,28 +2191,24 @@
   overflow: visible;
   clip: auto; }
 
-.panel, .panel-left, .panel-right {
-  position: absolute;
-  width: 100%;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; }
-  .panel.active, .active.panel-left, .active.panel-right {
-    left: 0;
+.modal {
+  opacity: 0;
+  width: 90%;
+  visibility: hidden;
+  position: relative;
+  background: white;
+  z-index: 10;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+  .modal.show {
     opacity: 1;
-    visibility: visible; }
-
-.panel-left {
-  left: -100%;
-  opacity: 0;
-  visibility: hidden; }
-
-.panel-right {
-  left: 100%;
-  opacity: 0;
-  visibility: hidden; }
+    visibility: visible;
+    top: 6em;
+    left: 5%;
+    bottom: 6em; }
 
 .amount:after {
   content: ' GBP'; }
@@ -2265,17 +2261,30 @@
           visibility: hidden;
           position: absolute;
           padding: 1em;
+          width: 1.5em;
+          height: 1.5em;
           right: 0;
-          background: white;
           border-left: 2px dotted #C8C9CA;
           cursor: pointer;
-          -webkit-transition: 0.3s;
-          -moz-transition: 0.3s;
-          -ms-transition: 0.3s;
-          -o-transition: 0.3s;
-          transition: 0.3s; }
+          background: #C8C9CA;
+          -webkit-transition: 1s;
+          -moz-transition: 1s;
+          -ms-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s; }
           .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action:hover {
             background: #C8C9CA; }
+          .card .card-content .card-list-item .card-list-item-header .card-list-item-header-action.active {
+            opacity: 1;
+            visibility: visible;
+            width: 97.5%;
+            height: 100%;
+            border-left: none;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+            transition: 1s; }
         .card .card-content .card-list-item .card-list-item-header:hover .card-list-item-header-action {
           opacity: 1;
           visibility: visible; }
@@ -2494,7 +2503,7 @@ body {
   background-color: #F7F7F7;
   padding: 0;
   margin: 0;
-  margin-top: 3em;
+  margin-top: 6em;
   overflow-x: hidden; }
   body.disable-scroll {
     overflow-y: hidden; }

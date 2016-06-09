@@ -7,7 +7,7 @@
 @import "mixins/transition";
 @import "mixins/box-shadow";
 
-@import "components/panel";
+@import "components/modal";
 @import "components/card-list";
 @import "components/mask";
 @import "components/grid";
@@ -19,7 +19,7 @@ body {
     background-color: #F7F7F7;
     padding: 0;
     margin: 0;
-    margin-top: 3em;
+    margin-top: 6em;
     overflow-x: hidden;
     
     &.disable-scroll {
